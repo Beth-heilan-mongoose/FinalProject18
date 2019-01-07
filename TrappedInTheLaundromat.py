@@ -1,17 +1,23 @@
 import random
 
-print("Just when you thought the worst was over with your nightmare in the dryer, the worst is yet to come. For so begins the long, treacherous journey of trying to escape the terrors of the not-so-friendly neighborhood laundromat. Best of luck. The crocodiles bite.")
-
 #create a character
 class Player:
     """Person whom you will be playing as"""
-def__init__(self, name, description, health, attack, defense, weapon):
-    self.name = name
-    self.description = overview
-    self.health = hp
-    self.attack = atk
-    self.defense = defense
-    self.weapon = arms
+    def __init__(self, name, description, health, attack, defense, weapon):
+        self.name = name
+        self.description = overview
+        self.health = hp
+        self.attack = atk
+        self.defense = defense
+        self.weapon = arms
+
+    def show_stats(self):
+        print(f"""{self.name} Character Profile:
+- {self.description}
+- Health - {self.health}
+- Attack - {self.attack}
+- Defense - {self.defense}
+- Weapon - {self.weapon}
 
 character_list = {
     'champions': {
@@ -26,7 +32,9 @@ jack = Player("Jack", "A CDM who takes no prisoners in his tackles. Only scores 
 ribeye = Player("Ribeye", "A product of the Tasmanian outback who rather resembles an echidna at the best of times and the devil at the worst of times.", 175, 23, 18, "soaked towels twisted into lariats"
 lamb chop = Player("Lamb Chop", "A creature of dubious means who is well done...", 200, 17, 22, "an army of weasels who hearken to his every word"
 
-
-
-
-
+play = input
+if play.lower() == "yes":
+    def scene_1():
+        print("Introduction:")
+        print("Just when you thought the worst was over with your nightmare in the dryer, the worst is yet to come. For so begins the long, treacherous journey of trying to escape the terrors of the not-so-friendly neighborhood laundromat. Best of luck. The crocodiles bite.")
+        print("Choose a character:")
