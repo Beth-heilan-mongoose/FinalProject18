@@ -1,6 +1,9 @@
 import random
 active_character = ''
 
+#game function
+def game():
+
 #create a character
 class Player:
     """Person whom you will be playing as"""
@@ -76,6 +79,7 @@ if play.lower() == "yes":
         print("You must decide which tiles are safe. The tiles on the floor are black, grey, and white, but all three colors of tile are collapsing. There must be a sequence. Choose a color tile.")
         x()
         input("Choose a color tile to step on. Type b for black, g for grey, and w for white.")
+        tiles_left = 4
         while tiles_left:
             if input == 'b':
                 print("You step hesitantly onto the tile. It holds. You breathe a sign of relief... and then it collapses. You were almost there. Tough luck.")
@@ -85,6 +89,27 @@ if play.lower() == "yes":
                 print("There are only three tile colors. Maybe you're feeling a bit weird after that ordeal in the dryer? Take a minute and try again.")
             else:
                 print("The tile holds. Now you must choose the next tile.")
+        x()
+        print("You stumble across the rest of the tiles. Congratulations! You have passed the second level!")
+        x()
+        print("The third level is full of shattered washing machines and dryers. You warily glance around, and are shocked to see some wild creatures crawling out of the debris and broken pieces.")
+        x()
+        print("Among other horrendous beasts, a few crocodiles, snakes, and large tortoises appear out of the wreckage. You freak out.")
+        x()
+        input("You are deathly afraid of... a) Rodents of Unusual Size b) Gila Monsters c) Bats (thanks Mr. Stanko)")
+            if input == a:
+                print("Just your luck. It would be against all copyright laws to put those in this game. Proceed.")
+            elif input == b:
+                print("HAHA! Not only are Gila Monsters frequent customers of laundromats, they just happen to be in this one! Overcome thy fear or perish!")
+            else input == c:
+                print("Hurry and see a healthcare provider. Being in the same room as these bats, no matter what kind, is extremely dangerous. Their rabies may spread. That's a important note, and will be even more important IF you get out.")
+        x()
+        print("You crawl on top of the nearest washing machine. YOU HAVE THE HIGH GROUND NOW.")
+        x()
+        print("You draw your {weapon} and prepare to use it. The crocodiles snap at you. They are vicious creatures, and very hungry.")
+        x()
 
 
+
+https://codereview.stackexchange.com/questions/36768/tiny-text-adventure
 
