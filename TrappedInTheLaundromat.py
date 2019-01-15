@@ -1,9 +1,6 @@
 import random
 active_character = ''
 
-#game function
-def game():
-
 #create a character
 class Player:
     """Person whom you will be playing as"""
@@ -50,7 +47,10 @@ elif choice == ribeye:
 else:
     active_character = lamb_chop
 
-play = input("Would you like to enter the magical world of the laundromat? Type 'yes' or 'no'.")
+#game function
+def game():
+
+    play = input("Would you like to enter the magical world of the laundromat? Type 'yes' or 'no'.")
 if play.lower() == "yes":
     def scene_1():
         print("Introduction:")
@@ -78,14 +78,14 @@ if play.lower() == "yes":
         x()
         print("You must decide which tiles are safe. The tiles on the floor are black, grey, and white, but all three colors of tile are collapsing. There must be a sequence. Choose a color tile.")
         x()
-        input("Choose a color tile to step on. Type b for black, g for grey, and w for white.")
+        input_1 = input("Choose a color tile to step on. Type b for black, g for grey, and w for white.")
         tiles_left = 4
         while tiles_left:
-            if input == 'b':
+            if input_1 == 'b':
                 print("You step hesitantly onto the tile. It holds. You breathe a sign of relief... and then it collapses. You were almost there. Tough luck.")
-            elif input == 'g':
+            elif input_1 == 'g':
                 print("You confidently jump onto the tile, which promptly collapses. Game over.")
-            elif input != 'b','g','w':
+            elif input_1 != ('b','g','w'):
                 print("There are only three tile colors. Maybe you're feeling a bit weird after that ordeal in the dryer? Take a minute and try again.")
             else:
                 print("The tile holds. Now you must choose the next tile.")
@@ -96,19 +96,34 @@ if play.lower() == "yes":
         x()
         print("Among other horrendous beasts, a few crocodiles, snakes, and large tortoises appear out of the wreckage. You freak out.")
         x()
-        input("You are deathly afraid of... a) Rodents of Unusual Size b) Gila Monsters c) Bats (thanks Mr. Stanko)")
-            if input == a:
+        input_2 = input("You are deathly afraid of... a) Rodents of Unusual Size b) Gila Monsters c) Bats (thanks Mr. Stanko)")
+            if input_2 == a:
                 print("Just your luck. It would be against all copyright laws to put those in this game. Proceed.")
-            elif input == b:
+            elif input_2 == b:
                 print("HAHA! Not only are Gila Monsters frequent customers of laundromats, they just happen to be in this one! Overcome thy fear or perish!")
-            else input == c:
+            else input_2 == c:
                 print("Hurry and see a healthcare provider. Being in the same room as these bats, no matter what kind, is extremely dangerous. Their rabies may spread. That's a important note, and will be even more important IF you get out.")
         x()
         print("You crawl on top of the nearest washing machine. YOU HAVE THE HIGH GROUND NOW.")
         x()
         print("You draw your {weapon} and prepare to use it. The crocodiles snap at you. They are vicious creatures, and very hungry.")
         x()
-
+        print("You use your {weapon} in a threatening manner, but the {weapon} is quickly devoured by the hungry crocodiles. So much for that.")
+        x()
+        print("Deciding that you are pretty desperate to get out of this situation, you remember a show you used to watch as a child. What was it called?")
+        x()
+        print("Ah, yes. The Crocodile Hunter featuring the impeccable Steve Irwin. All the crocodile-hunting skills you learned as a child will surely help you now. Now what is it that could help you in this situation?")
+        x()
+        input_3 = input("""Which information will you employ from the legendary Crocodile Hunter in order to employ the crocodile as your own?:
+            a) Shout 'Crikey!' as loud as humanly possible and leap onto the back of the crocodile
+            b) Take out a rotting pig carcass and entice the crocodile to eat, then tie its jaws so it will not bite
+            c) Tame it with the soothing touch that only the Crocodile Hunter could give in hopes of winning its affection""")
+        if input_3 == a:
+            print("The crocodile is momentarily confused, twisting its head to see its familiar friend Steve but once it realizes that you are not he, he opens his jaws wide. Game over.")
+        elif input_3 == b:
+            print("The crocodiles see the carcass and remember fondly how Steve used to feed them rotting pig carcasses as well. Driven to tears (real tears), they submit to the
+        elif input_3 == c:
+            print("The crocodiles roll over once you rub their stomachs. Taking advantage of the opportunity, you run away.")
 
 
 https://codereview.stackexchange.com/questions/36768/tiny-text-adventure
