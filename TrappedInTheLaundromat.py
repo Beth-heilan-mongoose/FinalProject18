@@ -47,6 +47,8 @@ elif choice == ribeye:
 else:
     active_character = lamb_chop
 
+has_crocodile == false
+
 #game function
 def game():
 
@@ -96,17 +98,55 @@ if play.lower() == "yes":
         x()
         print("Among other horrendous beasts, a few crocodiles, snakes, and large tortoises appear out of the wreckage. You freak out.")
         x()
+        print("                     '``````^~"-,_`"-,_
+        print("       .-~c~-.                    `~:. ^-.
+        print("    `~~~-.c    ;                      `:.  `-,     _.-~~^^~:.
+        print("          `.   ;      _,--~~~~-._       `:.   ~. .~          `.
+        print("         .` ;'   .:`           `:       `:.   `    _.:-,.    `.
+        print("        .' .:   :'    _.-~^~-.    `.       `..'   .:      `.    '
+        print("        :  .' _:'   .-'        `.    :.     .:   .'`.        :    ;
+        print("        :  `-'   .:'             `.    `^~~^`   .:.  `.      ;    ;
+        print("        `-.__,-~                  ~-.        ,' ':    '.__.`    :'
+        print("                                     ~--..--'     ':.         .:'
+        print("                                                     ':..___.:'
+        x()
+                    _.--....
+                 _....---;:'::' ^__/
+               .' `'`___....---=-'`
+              /::' (`
+              \'   `:.
+               `\::.  ';-"":::-._  {}
+            _.--'`\:' .'`-.`'`.' `{I}
+         .-' `' .;;`\::.   '. _: {-I}`\
+       .'  .:.  `:: _):::  _;' `{=I}.:|
+      /.  ::::`":::` ':'.-'`':. {_I}::/
+      |:. ':'  :::::  .':'`:. `'|':|:'
+       \:   .:. ''' .:| .:, _:./':.|
+        '--.:::...---'\:'.:`':`':./
+                       '-::..:::-'
+        (x)
         input_2 = input("You are deathly afraid of... a) Rodents of Unusual Size b) Gila Monsters c) Bats (thanks Mr. Stanko)")
-            if input_2 == a:
-                print("Just your luck. It would be against all copyright laws to put those in this game. Proceed.")
-            elif input_2 == b:
-                print("HAHA! Not only are Gila Monsters frequent customers of laundromats, they just happen to be in this one! Overcome thy fear or perish!")
-            else input_2 == c:
-                print("Hurry and see a healthcare provider. Being in the same room as these bats, no matter what kind, is extremely dangerous. Their rabies may spread. That's a important note, and will be even more important IF you get out.")
+        if input_2 == a:
+            print("Just your luck. It would be against all copyright laws to put those in this game. Proceed.")
+        elif input_2 == b:
+            print("HAHA! Not only are Gila Monsters frequent customers of laundromats, they just happen to be in this one! Overcome thy fear or perish!")
+        elif input_2 == c:
+            print("Hurry and see a healthcare provider. Being in the same room as these bats, no matter what kind, is extremely dangerous. Their rabies may spread. That's a important note, and will be even more important IF you get out.")
         x()
         print("You crawl on top of the nearest washing machine. YOU HAVE THE HIGH GROUND NOW.")
         x()
         print("You draw your {weapon} and prepare to use it. The crocodiles snap at you. They are vicious creatures, and very hungry.")
+        x()
+        print("              _.'^^'.    ")
+        print(" _        _.-' ((@)) '.   ./\/\/\/\/\/\,.---.__ ")
+        print(" ..'o'...-'      ~~~    '~/\/\/\/\/\/\__.---.   `-._ ")
+        print(":                         /\/\/\/\,-'              `-.__ "")
+        print(""^VvvvvvvvvvvVvVv                  |                     `-._._._ ")
+        print(";^^^^^^^^^^^`         /             `\          /               `-._ ")
+        print("```````````````'.`                    `\        (                 `'-._ ")
+        print("          .-----'`   /\               `\    )--.______.______._______`/ ")
+        print("          (((------'``  `'--------'`(((----' ")
+
         x()
         print("You use your {weapon} in a threatening manner, but the {weapon} is quickly devoured by the hungry crocodiles. So much for that.")
         x()
@@ -120,11 +160,19 @@ if play.lower() == "yes":
             c) Tame it with the soothing touch that only the Crocodile Hunter could give in hopes of winning its affection""")
         if input_3 == a:
             print("The crocodile is momentarily confused, twisting its head to see its familiar friend Steve but once it realizes that you are not he, he opens his jaws wide. Game over.")
+            gamecis.exit()
         elif input_3 == b:
-            print("The crocodiles see the carcass and remember fondly how Steve used to feed them rotting pig carcasses as well. Driven to tears (real tears), they submit to the
+            print("The crocodiles see the carcass and remember fondly how Steve used to feed them rotting pig carcasses as well. Driven to tears (real tears), they submit to the pig and allow themselves to be muzzled. You have collected a crocodile.")
+            has_crocodile == true
         elif input_3 == c:
             print("The crocodiles roll over once you rub their stomachs. Taking advantage of the opportunity, you run away.")
+        x()
+        print("You rejoice in your good luck as you pass to the third level.")
+        x()
+        print("
+
 
 
 https://codereview.stackexchange.com/questions/36768/tiny-text-adventure
+https://asciiart.website//joan/www.geocities.com/SoHo/7373/reptiles.html
 
