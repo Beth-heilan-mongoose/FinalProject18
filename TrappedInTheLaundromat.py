@@ -26,11 +26,7 @@ class Player:
 - Defense - {self.defense}
 - Weapon - {self.weapon}""")
 
-character_list = {
-    'champions': {
-        ('Wallace', 'Julia', 'Franc', 'Jack', 'Ribeye','Lamb Chop')
-    }
-}
+character_list = 'Wallace', 'Julia', 'Franc', 'Jack', 'Ribeye', 'Lamb Chop'
 
 wallace = Player("Wallace","An unapologetically Scottish lumberjack who has many pairs of overalls that must be cleaned thoroughly. Armed with a passion for clean dungarees, this monsterous man will do anything to escape his treacherous laundry run.", 212, 24, 26, "wire hangers")
 julia = Player("Julia", "A mild-mannered high-school girl making a living from tutoring a little creature. Is secretly a slayer of men.", 170, 20, 19, "soap flakes w/ 5% concentrate of baking soda")
@@ -105,7 +101,7 @@ def game():
             x()
             print("You stumble across the rest of the tiles. Congratulations! You have passed the first level!")
             x()
-            print("The third level is full of shattered washing machines and dryers. You warily glance around, and are shocked to see some wild creatures crawling out of the debris and broken pieces.")
+            print("The second level is full of shattered washing machines and dryers. You warily glance around, and are shocked to see some wild creatures crawling out of the debris and broken pieces.")
             x()
             print("Among other horrendous beasts, a few crocodiles, snakes, and large tortoises appear out of the wreckage. You freak out.")
             x()
@@ -122,16 +118,24 @@ def game():
             print("                                                     ':..___.:' ")
             x()
             input_2 = input("You are deathly afraid of... a) Rodents of Unusual Size b) Gila Monsters c) Bats (thanks Mr. Stanko)")
-            if input_2 == a:
+            if input_2 == 'a':
+                x()
                 print("Just your luck. It would be against all copyright laws to put those in this game. Proceed.")
-            elif input_2 == b:
+            elif input_2 == 'b':
+                x()
                 print("HAHA! Not only are Gila Monsters frequent customers of laundromats, they just happen to be in this one! Overcome thy fear or perish!")
-            elif input_2 == c:
+            elif input_2 == 'c':
+                x()
                 print("Hurry and see a healthcare provider. Being in the same room as these bats, no matter what kind, is extremely dangerous. Their rabies may spread. That's a important note, and will be even more important IF you get out.")
+            else:
+                while input_2 not in ('a', 'b', 'c'):
+                    x()
+                    print("Unless you wish to disclose all your fears, please choose one of the above letters.")
+                    input_2 = input("You are deathly afraid of... a) Rodents of Unusual Size b) Gila Monsters c) Bats (thanks Mr. Stanko)")
             x()
             print("You crawl on top of the nearest washing machine. YOU HAVE THE HIGH GROUND NOW.")
             x()
-            print("You draw your {weapon} and prepare to use it. The crocodiles snap at you. They are vicious creatures, and very hungry.")
+            print(f"You draw your {active_character.weapon} and prepare to use it. The crocodiles snap at you. They are vicious creatures, and very hungry.")
             x()
             print("              _.'^^'.    ")
             print(" _        _.-' ((@)) '.   ./\/\/\/\/\/\,.---.__\ ")
@@ -144,7 +148,7 @@ def game():
             print("          (((------'``  `'--------'`(((----' ")
 
             x()
-            print("You use your {weapon} in a threatening manner, but the {weapon} is quickly devoured by the hungry crocodiles. So much for that.")
+            print(f"You use your {active_character.weapon} in a threatening manner, but the {active_character.weapon} is quickly devoured by the hungry crocodiles. So much for that.")
             x()
             print("Deciding that you are pretty desperate to get out of this situation, you remember a show you used to watch as a child. What was it called?")
             x()
@@ -154,14 +158,25 @@ def game():
                 a) Shout 'Crikey!' as loud as humanly possible and leap onto the back of the crocodile
                 b) Take out a rotting pig carcass and entice the crocodile to eat, then tie its jaws so it will not bite
                 c) Tame it with the soothing touch that only the Crocodile Hunter could give in hopes of winning its affection""")
-            if input_3 == a:
+            if input_3 == 'a':
+                x()
                 print("The crocodile is momentarily confused, twisting its head to see its familiar friend Steve but once it realizes that you are not he, he opens his jaws wide. Game over.")
                 gamecis.exit()
-            elif input_3 == b:
+            elif input_3 == 'b':
+                x()
                 print("The crocodiles see the carcass and remember fondly how Steve used to feed them rotting pig carcasses as well. Driven to tears (real tears), they submit to the pig and allow themselves to be muzzled. You have collected a crocodile.")
-                has_crocodile == true
-            elif input_3 == c:
+                has_crocodile == True
+            elif input_3 == 'c':
+                x()
                 print("The crocodiles roll over once you rub their stomachs. Taking advantage of the opportunity, you run away.")
+            else:
+                while input_2 not in ('a', 'b', 'c'):
+                    x()
+                    print("The crocodiles are getting closer. You haven't time to mess around!")
+                    input_3 = input("""Which information will you employ from the legendary Crocodile Hunter in order to employ the crocodile as your own?:
+                a) Shout 'Crikey!' as loud as humanly possible and leap onto the back of the crocodile
+                b) Take out a rotting pig carcass and entice the crocodile to eat, then tie its jaws so it will not bite
+                c) Tame it with the soothing touch that only the Crocodile Hunter could give in hopes of winning its affection""")
             x()
             print("You rejoice in your good luck as you pass to the third level.")
             x()
@@ -171,7 +186,18 @@ def game():
             x()
             print("You need a way to get out, and fast. Who knows what chemicals are in those soap flakes?")
             x()
-            print("As you contemplate what to do next a bolt of lightning strikes the laundromat, causing the lights to flicker.
+            print("As you contemplate what to do next a bolt of lightning strikes the laundromat, causing the lights to flicker.")
+            x()
+            print("Hovering above the floor appears a familiar face from your ordeal in the dryer: Steve.")
+            x()
+            input_4 = input("""What do you say to Steve?
+                a) Steve? What are you doing here?
+                b) You again! I thought I had vanquished thee back in the dryer!
+                c) Long time no see old friend. We should meet up like this more often.""")
+            if input_4 == 'a':
+                x()
+                print("""You shout up at Steve, "Steve? what are you doing here?""")
+
         scene_1()
 
 game()
