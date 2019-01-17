@@ -37,7 +37,7 @@ julia = Player("Julia", "A mild-mannered high-school girl making a living from t
 franc = Player("Franc", "A sensitive soul whose cuff links are made of pig teeth, one from each of his vanquished porkers in his days as a pig wrestler.", 194, 28, 15, "belt made of sausage links from his pig-wrestling days")
 jack = Player("Jack", "A CDM who takes no prisoners in his tackles. Only scores from volleys. Washes clothes by hand.", 188, 26, 35, "pet grolar bear that has ferocious teeth")
 ribeye = Player("Ribeye", "A product of the Tasmanian outback who rather resembles an echidna at the best of times and the devil at the worst of times.", 175, 23, 18, "soaked towels twisted into lariats")
-lamb_chop = Player("Lamb Chop", "A creature of dubious means who is well done...", 200, 17, 22, "an army of weasels who hearken to his every word")
+lamb_chop = Player("Lamb Chop", "A creature of dubious means who is well done...", 200, 17, 22, "army of weasels who hearken to your every word")
 
 has_crocodile = 'has a crocodile'
 has_crocodil = False
@@ -76,9 +76,9 @@ def game():
             x()
             print(f"Gripping your basket and your {active_character.weapon}, you begin across the room.")
             x()
-            print("The first level passes without event, and you begin to think to yourself that this is going to be easy. Some earthquake must have sunken the floor while you had your episode in the dryer, but everything's okay now.")
+            print("You begin to think to yourself that this is going to be easy. Some earthquake must have sunken the floor while you had your episode in the dryer, but everything's okay now.")
             x()
-            print("You are quite wrong.For just as you lay your foot upon the second level, the tile under it collapses, causing you to trip.")
+            print("You are quite wrong.For just as you lay your foot upon the floor, the tile under it collapses, causing you to trip.")
             x()
             print("You lay on the ground as tiles collapse around and under you, stunned. And to think that this was just a weekly visit to the laundromat!")
             x()
@@ -103,7 +103,7 @@ def game():
                         print("There are only three tile colors. Maybe you're feeling a bit weird after that ordeal in the dryer? Take a minute and try again.")
                         input_1 = input("Choose a color tile to step on. Type b for black, g for grey, and w for white.")
             x()
-            print("You stumble across the rest of the tiles. Congratulations! You have passed the second level!")
+            print("You stumble across the rest of the tiles. Congratulations! You have passed the first level!")
             x()
             print("The third level is full of shattered washing machines and dryers. You warily glance around, and are shocked to see some wild creatures crawling out of the debris and broken pieces.")
             x()
@@ -120,7 +120,7 @@ def game():
             print("        `-.__,-~                  ~-.        ,' ':    '.__.`    :' ")
             print("                                     ~--..--'     ':.         .:' ")
             print("                                                     ':..___.:' ")
-            (x)
+            x()
             input_2 = input("You are deathly afraid of... a) Rodents of Unusual Size b) Gila Monsters c) Bats (thanks Mr. Stanko)")
             if input_2 == a:
                 print("Just your luck. It would be against all copyright laws to put those in this game. Proceed.")
@@ -165,7 +165,13 @@ def game():
             x()
             print("You rejoice in your good luck as you pass to the third level.")
             x()
-            print("")
+            print("You immediately sneeze. The air is full of something very pungent. You open your eyes to see bubbles everywhere.")
+            x()
+            print("The earthquake must have disrupted the copious amount of washing liquid and soap flakes throughout the laundromat.You can scarcely see for all the foam floating aroound.")
+            x()
+            print("You need a way to get out, and fast. Who knows what chemicals are in those soap flakes?")
+            x()
+            print("As you contemplate what to do next a bolt of lightning strikes the laundromat, causing the lights to flicker.
         scene_1()
 
 game()
