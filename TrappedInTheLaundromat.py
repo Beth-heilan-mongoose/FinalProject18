@@ -1,6 +1,10 @@
 import random
 active_character = ''
 
+def x():
+    x = input("")
+    return x
+
 #create a character
 class Player:
     """Person whom you will be playing as"""
@@ -11,6 +15,8 @@ class Player:
         self.attack = attack
         self.defense = defense
         self.weapon = weapon
+
+    #def __str__ == " "
 
     def introduce(self):
         print(f"""{self.name} Character Profile:
@@ -33,42 +39,42 @@ jack = Player("Jack", "A CDM who takes no prisoners in his tackles. Only scores 
 ribeye = Player("Ribeye", "A product of the Tasmanian outback who rather resembles an echidna at the best of times and the devil at the worst of times.", 175, 23, 18, "soaked towels twisted into lariats")
 lamb_chop = Player("Lamb Chop", "A creature of dubious means who is well done...", 200, 17, 22, "an army of weasels who hearken to his every word")
 
-choice = input("Choose a character.")
-if choice == wallace:
-    active_character = wallace
-elif choice == julia:
-    active_character = julia
-elif choice == franc:
-    active_character = franc
-elif choice == jack:
-    active_character = jack
-elif choice == ribeye:
-    active_character = ribeye
-else:
-    active_character = lamb_chop
-
-has_crocodile == false
+has_crocodile = 'has a crocodile'
+has_crocodil = False
 
 #game function
 def game():
 
     play = input("Would you like to enter the magical world of the laundromat? Type 'yes' or 'no'.")
-    if play.lower() == "yes":
+    if play == "yes":
         def scene_1():
             print("Introduction:")
+            x()
             print("Just when you thought the worst was over with your nightmare in the dryer, the worst is yet to come. For so begins the long, treacherous journey of trying to escape the terrors of the not-so-friendly neighborhood laundromat. Best of luck. The crocodiles bite.")
-            choice = input("Choose a character:")
-            print({character_list})
             x()
-            input("Type the name of the character you wish to escape the labyrinth of the laundromat with.")
+            print("Choose a character:")
+            print(f"{character_list}")
             x()
-            print("[active_character], your mission is clear. Escape the atrocities of the laundromat.")
+            choice = input("Type the name of the character you wish to escape the labyrinth of the laundromat with.")
+            if choice == wallace:
+                active_character = wallace
+            elif choice == julia:
+                active_character = julia
+            elif choice == franc:
+                active_character = franc
+            elif choice == jack:
+                active_character = jack
+            elif choice == ribeye:
+                active_character = ribeye
+            else:
+                active_character = lamb_chop
+            print(f"\n{active_character}, your mission is clear. Escape the atrocities of the laundromat.")
             x()
             print("You step out of the dryer, a little fatigued but eager to get out of the laundromat forever. You will NOT be coming back.")
             x()
             print("Collecting your laundry, you turn around, only to see that the entire room has sunken into the ground. You must climb the levels in order to escape.")
             x()
-            print("Gripping your basket and your {self.weapon}, you begin across the room.")
+            print(f"Gripping your basket and your {active_character.weapon}, you begin across the room.")
             x()
             print("The first level passes without event, and you begin to think to yourself that this is going to be easy. Some earthquake must have sunken the floor while you had your episode in the dryer, but everything's okay now.")
             x()
@@ -78,19 +84,24 @@ def game():
             x()
             print("Your basket of laundry falls through the floor as the tiles around it collapse. But that is not your priority right now. It's life or death, and the last thing on your mind is whether your Gucci shirts will ever be seen again.")
             x()
-            print("You must decide which tiles are safe. The tiles on the floor are black, grey, and white, but all three colors of tile are collapsing. There must be a sequence. Choose a color tile.")
+            print("You must decide which tiles are safe. The tiles on the floor are black, grey, and white, but all three colors of tile are collapsing. There must be a sequence.")
             x()
             input_1 = input("Choose a color tile to step on. Type b for black, g for grey, and w for white.")
             tiles_left = 4
             while tiles_left:
                 if input_1 == 'b':
                     print("You step hesitantly onto the tile. It holds. You breathe a sign of relief... and then it collapses. You were almost there. Tough luck.")
+                    break
                 elif input_1 == 'g':
                     print("You confidently jump onto the tile, which promptly collapses. Game over.")
-                elif input_1 != ('b','g','w'):
-                    print("There are only three tile colors. Maybe you're feeling a bit weird after that ordeal in the dryer? Take a minute and try again.")
+                    break
+                elif input_1 == 'w':
+                    print("The tile holds.")
+                    break
                 else:
-                    print("The tile holds. Now you must choose the next tile.")
+                    while input_1 not in ('b','w','g'):
+                        print("There are only three tile colors. Maybe you're feeling a bit weird after that ordeal in the dryer? Take a minute and try again.")
+                        input_1 = input("Choose a color tile to step on. Type b for black, g for grey, and w for white.")
             x()
             print("You stumble across the rest of the tiles. Congratulations! You have passed the second level!")
             x()
@@ -126,7 +137,7 @@ def game():
             print(" _        _.-' ((@)) '.   ./\/\/\/\/\/\,.---.__\ ")
             print(" ..'o'...-'      ~~~    '~/\/\/\/\/\/\__.---.   `-._ ")
             print(":                         /\/\/\/\,-'              `-.__\ ")
-            print(""^VvvvvvvvvvvVvVv                  |                     \`-._._._ ")
+            print("^VvvvvvvvvvvVvVv                                       `-._._._ ")
             print(";^^^^^^^^^^^`         /             `\          /               `-._ ")
             print("```````````````'.`                    `\        (                 `'-._ ")
             print("          .-----'`   /\               `\    )--.______.______._______`/ ")
@@ -157,8 +168,9 @@ def game():
             print("")
         scene_1()
 
+game()
 
 
-https://codereview.stackexchange.com/questions/36768/tiny-text-adventure
-https://asciiart.website//joan/www.geocities.com/SoHo/7373/reptiles.html
+#https://codereview.stackexchange.com/questions/36768/tiny-text-adventure
+#https://asciiart.website//joan/www.geocities.com/SoHo/7373/reptiles.html
 
