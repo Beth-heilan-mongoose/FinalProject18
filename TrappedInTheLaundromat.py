@@ -35,6 +35,7 @@ jack = Player("Jack", "A CDM who takes no prisoners in his tackles. Only scores 
 ribeye = Player("Ribeye", "A product of the Tasmanian outback who rather resembles an echidna at the best of times and the devil at the worst of times.", 175, 23, 18, "soaked towels twisted into lariats")
 lamb_chop = Player("Lamb Chop", "A creature of dubious means who is well done...", 200, 17, 22, "army of weasels who hearken to your every word")
 
+#defines that your character has collected a crocodile
 has_crocodile = 'has a crocodile'
 has_crocodil = False
 
@@ -70,11 +71,11 @@ def game():
             x()
             print("Collecting your laundry, you turn around, only to see that the entire room has sunken into the ground. You must climb the levels in order to escape.")
             x()
-            print(f"Gripping your basket and your {active_character.weapon}, you begin across the room.")
+            print(f"Gripping your basket and your \n{active_character.weapon}, you begin across the room.")
             x()
             print("You begin to think to yourself that this is going to be easy. Some earthquake must have sunken the floor while you had your episode in the dryer, but everything's okay now.")
             x()
-            print("You are quite wrong.For just as you lay your foot upon the floor, the tile under it collapses, causing you to trip.")
+            print("You are quite wrong. For just as you lay your foot upon the floor, the tile under it collapses, causing you to trip.")
             x()
             print("You lay on the ground as tiles collapse around and under you, stunned. And to think that this was just a weekly visit to the laundromat!")
             x()
@@ -88,9 +89,11 @@ def game():
                 if input_1 == 'b':
                     print("You step hesitantly onto the tile. It holds. You breathe a sign of relief... and then it collapses. You were almost there. Tough luck.")
                     break
+                    cisgame.exit()
                 elif input_1 == 'g':
                     print("You confidently jump onto the tile, which promptly collapses. Game over.")
                     break
+                    cisgame.exit()
                 elif input_1 == 'w':
                     print("The tile holds.")
                     break
@@ -173,6 +176,7 @@ def game():
                 while input_2 not in ('a', 'b', 'c'):
                     x()
                     print("The crocodiles are getting closer. You haven't time to mess around!")
+                    x()
                     input_3 = input("""Which information will you employ from the legendary Crocodile Hunter in order to employ the crocodile as your own?:
                 a) Shout 'Crikey!' as loud as humanly possible and leap onto the back of the crocodile
                 b) Take out a rotting pig carcass and entice the crocodile to eat, then tie its jaws so it will not bite
@@ -192,11 +196,61 @@ def game():
             x()
             input_4 = input("""What do you say to Steve?
                 a) Steve? What are you doing here?
-                b) You again! I thought I had vanquished thee back in the dryer!
+                b) You again?! I thought I had vanquished thee back in the dryer!
                 c) Long time no see old friend. We should meet up like this more often.""")
             if input_4 == 'a':
                 x()
                 print("""You shout up at Steve, "Steve? what are you doing here?""")
+            elif input_4 == 'b':
+                x()
+                print("""You shout up at Steve, "You again?! I thought I had vanquished thee back in the dryer!""")
+            elif input_4 == 'c':
+                x()
+                print("""You shout up at Steve, "Long time no see old friend. We should meet up like this more often.""")
+            else:
+                while input_4 not in ('a','b','c'):
+                    x()
+                    print("Ghosts are testy creatures. Better not provoke him. Choose one of the supplied statements.")
+                    x()
+                    input_4 = input("""What do you say to Steve?
+                a) Steve? What are you doing here?
+                b) You again?! I thought I had vanquished thee back in the dryer!
+                c) Long time no see old friend. We should meet up like this more often.""")
+            x()
+            print("Steve smiles a very familiar smile but says nothing.")
+            x()
+            print("Now where have you seen that smile before?")
+            x()
+            print("Wait! You would recognize that face anwhere! It's Steve Irwin!")
+            x()
+            if has_crocodile == True:
+                print("The crocodile's eyes dance in happiness at the sight of his best friend.")
+            else:
+                print("Your childhood idol hovering right near you nearly makes you faint, but somehow you keep composure.")
+            x()
+            print("Steve offers you something in his hands.")
+            x()
+            input_5 = input("Do you accept it?")
+            if input_5.lower == 'yes':
+                x()
+                print("Steve the Great and Powerful has given you what appears to be a transportation device. There's some writing on the top.")
+                x()
+                print("'Dear Fortunate One', it reads, 'because Steve Irwin the Great has chosen to look upon thee with favor, you may choose to skip the next level if you so wish. Take heed, it may not be the wisest choice, but 'tis a choice of thine own making.")
+                input_6 = input("Would you care to skip the next level?")
+                if input_6.lower == 'yes':
+                    print("Steve shouts 'Crikey!' at you as you vanish into the air.")
+                elif input_6.lower == 'no':
+                    print("You chuck the box at Steve, still angry about your treatment in the dryer, and begin to run blindly through the bubbles.")
+                    x()
+                    print("Steve Irwin angrily shouts after you, but you have disappeared into the bubbles and you don't hear it.")
+                    x()
+                    print("Acheivement Earned: Cursed by Steve Irwin")
+                    x()
+            elif input_5.lower == 'no':
+                x()
+                print("
+
+
 
         scene_1()
 
