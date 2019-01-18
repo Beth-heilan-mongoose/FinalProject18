@@ -1,4 +1,5 @@
 import random
+import sys
 active_character = ''
 
 def x():
@@ -20,7 +21,7 @@ class Player:
 
     def introduce(self):
         print(f"""{self.name} Character Profile:
-- {self.description}
+        {self.description}
 - Health - {self.health}
 - Attack - {self.attack}
 - Defense - {self.defense}
@@ -50,7 +51,17 @@ def game():
             print("Just when you thought the worst was over with your nightmare in the dryer, the worst is yet to come. For so begins the long, treacherous journey of trying to escape the terrors of the not-so-friendly neighborhood laundromat. Best of luck. The crocodiles bite.")
             x()
             print("Choose a character:")
-            print(f"{character_list}")
+            wallace.introduce()
+            x()
+            julia.introduce()
+            x()
+            franc.introduce()
+            x()
+            jack.introduce()
+            x()
+            ribeye.introduce()
+            x()
+            lamb_chop.introduce()
             x()
             choice = input("Type the name of the character you wish to escape the labyrinth of the laundromat with.")
             if choice == wallace:
@@ -88,12 +99,14 @@ def game():
             while tiles_left:
                 if input_1 == 'b':
                     print("You step hesitantly onto the tile. It holds. You breathe a sign of relief... and then it collapses. You were almost there. Tough luck.")
+                    x()
+                    sys.exit()
                     break
-                    cisgame.exit()
                 elif input_1 == 'g':
                     print("You confidently jump onto the tile, which promptly collapses. Game over.")
+                    x()
+                    sys.exit()
                     break
-                    cisgame.exit()
                 elif input_1 == 'w':
                     print("The tile holds.")
                     break
@@ -151,7 +164,8 @@ def game():
             print("          (((------'``  `'--------'`(((----' ")
 
             x()
-            print(f"You use your {active_character.weapon} in a threatening manner, but the {active_character.weapon} is quickly devoured by the hungry crocodiles. So much for that.")
+            print(f"""You use your {active_character.weapon} in a threatening manner, but the {active_character.weapon} is
+            quickly devoured by the hungry crocodiles. So much for that.""")
             x()
             print("Deciding that you are pretty desperate to get out of this situation, you remember a show you used to watch as a child. What was it called?")
             x()
@@ -164,7 +178,7 @@ def game():
             if input_3 == 'a':
                 x()
                 print("The crocodile is momentarily confused, twisting its head to see its familiar friend Steve but once it realizes that you are not he, he opens his jaws wide. Game over.")
-                gamecis.exit()
+                sys.exit()
             elif input_3 == 'b':
                 x()
                 print("The crocodiles see the carcass and remember fondly how Steve used to feed them rotting pig carcasses as well. Driven to tears (real tears), they submit to the pig and allow themselves to be muzzled. You have collected a crocodile.")
@@ -248,11 +262,26 @@ def game():
                     x()
             elif input_5.lower == 'no':
                 x()
-                print("
-
-
-
+                print("Steve is offended.")
+                x()
+                print("Steve attacks you on his magic crocodile, taking half your life points. Then he disappears.")
+                x()
+                self.health == self.health / 2
+                x()
+                print(f"Your health is now {self.health}. Better watch out. Steve Irwin is not a god to be trifled with.")
+                x()
         scene_1()
+    elif play == "no":
+        print("Why are you even here...")
+        sys.exit()
+    else:
+        while play not in ('yes', 'no'):
+            print("A simple yes or no would do...")
+            play = input("Would you like to enter the magical world of the laundromat? Type 'yes' or 'no'.")
+
+
+
+
 
 game()
 
