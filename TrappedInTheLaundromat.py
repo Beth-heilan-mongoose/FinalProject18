@@ -1,6 +1,5 @@
-import random
 import sys
-active_character = ''
+#active_character = ''
 
 def x():
     x = input("")
@@ -29,12 +28,12 @@ class Player:
 
 character_list = 'Wallace', 'Julia', 'Franc', 'Jack', 'Ribeye', 'Lamb Chop'
 
-wallace = Player("Wallace","An unapologetically Scottish lumberjack who has many pairs of overalls that must be cleaned thoroughly. Armed with a passion for clean dungarees, this monsterous man will do anything to escape his treacherous laundry run.", 212, 24, 26, "wire hangers")
+wallace = Player("Wallace","An unapologetically Scottish lumberjack armed with a passion for clean dungarees.", 212, 24, 26, "wire hangers")
 julia = Player("Julia", "A mild-mannered high-school girl making a living from tutoring a little creature. Is secretly a slayer of men.", 170, 20, 19, "soap flakes w/ 5% concentrate of baking soda")
 franc = Player("Franc", "A sensitive soul whose cuff links are made of pig teeth, one from each of his vanquished porkers in his days as a pig wrestler.", 194, 28, 15, "belt made of sausage links from his pig-wrestling days")
-jack = Player("Jack", "A CDM who takes no prisoners in his tackles. Only scores from volleys. Washes clothes by hand.", 188, 26, 35, "pet grolar bear that has ferocious teeth")
+jack = Player("Jack", "An honorable man with slight appetite for unexpected tackling. Organic. Washes all clothes by hand.", 188, 26, 35, "pet grolar bear that has ferocious teeth")
 ribeye = Player("Ribeye", "A product of the Tasmanian outback who rather resembles an echidna at the best of times and the devil at the worst of times.", 175, 23, 18, "soaked towels twisted into lariats")
-lamb_chop = Player("Lamb Chop", "A creature of dubious means who is well done...", 200, 17, 22, "army of weasels who hearken to your every word")
+lamb_chop = Player("Lamb Chop", "A creature of dubious means who is well done...", 200, 17, 22, "army of weasels")
 
 #defines that your character has collected a crocodile
 has_crocodile = 'has a crocodile'
@@ -46,9 +45,11 @@ def game():
     play = input("Would you like to enter the magical world of the laundromat? Type 'yes' or 'no'.")
     if play == "yes":
         def scene_1():
-            print("Introduction:")
             x()
+            print("Introduction:")
             print("Just when you thought the worst was over with your nightmare in the dryer, the worst is yet to come. For so begins the long, treacherous journey of trying to escape the terrors of the not-so-friendly neighborhood laundromat. Best of luck. The crocodiles bite.")
+            x()
+            print("Directions: Unless prompted otherwise, hit the 'enter' key to proceed in your quest. Unless underwater, continue to breathe.")
             x()
             print("Choose a character:")
             wallace.introduce()
@@ -64,25 +65,30 @@ def game():
             lamb_chop.introduce()
             x()
             choice = input("Type the name of the character you wish to escape the labyrinth of the laundromat with.")
-            if choice == wallace:
+            if choice.upper == 'wallace':
                 active_character = wallace
-            elif choice == julia:
+            elif choice.upper == 'julia':
                 active_character = julia
-            elif choice == franc:
+            elif choice.upper == 'franc':
                 active_character = franc
-            elif choice == jack:
+            elif choice.upper == 'jack':
                 active_character = jack
-            elif choice == ribeye:
+            elif choice.upper == 'ribeye':
                 active_character = ribeye
-            else:
+            elif choice.upper == 'lamb chop':
                 active_character = lamb_chop
-            print(f"\n{active_character}, your mission is clear. Escape the atrocities of the laundromat.")
+            else:
+                while choice not in ('wallace', 'julia', 'franc', 'jack', 'ribeye', 'lamb chop'):
+                    print("That character is not valid. Please choose a valid character.")
+                    choice = input("Type the name of the character you wish to escape the labyrinth of the laundromat with.")
+                    x()
+            print(f"\n{choice}, your mission is clear. Escape the atrocities of the laundromat.")
             x()
             print("You step out of the dryer, a little fatigued but eager to get out of the laundromat forever. You will NOT be coming back.")
             x()
             print("Collecting your laundry, you turn around, only to see that the entire room has sunken into the ground. You must climb the levels in order to escape.")
             x()
-            print(f"Gripping your basket and your \n{active_character.weapon}, you begin across the room.")
+            print(f"Gripping your basket you begin across the room.")
             x()
             print("You begin to think to yourself that this is going to be easy. Some earthquake must have sunken the floor while you had your episode in the dryer, but everything's okay now.")
             x()
@@ -151,7 +157,7 @@ def game():
             x()
             print("You crawl on top of the nearest washing machine. YOU HAVE THE HIGH GROUND NOW.")
             x()
-            print(f"You draw your {active_character.weapon} and prepare to use it. The crocodiles snap at you. They are vicious creatures, and very hungry.")
+            print(f"You draw your weapon and prepare to use it. The crocodiles snap at you. They are vicious creatures, and very hungry.")
             x()
             print("              _.'^^'.    ")
             print(" _        _.-' ((@)) '.   ./\/\/\/\/\/\,.---.__\ ")
@@ -164,7 +170,7 @@ def game():
             print("          (((------'``  `'--------'`(((----' ")
 
             x()
-            print(f"""You use your {active_character.weapon} in a threatening manner, but the {active_character.weapon} is
+            print(f"""You wave your weapon in a threatening manner, but your weapon is
             quickly devoured by the hungry crocodiles. So much for that.""")
             x()
             print("Deciding that you are pretty desperate to get out of this situation, you remember a show you used to watch as a child. What was it called?")
@@ -220,7 +226,7 @@ def game():
                 print("""You shout up at Steve, "You again?! I thought I had vanquished thee back in the dryer!""")
             elif input_4 == 'c':
                 x()
-                print("""You shout up at Steve, "Long time no see old friend. We should meet up like this more often.""")
+                print("""You shout up at Steve, "Long time no see old friend. We should meet up like this more often." """)
             else:
                 while input_4 not in ('a','b','c'):
                     x()
@@ -244,7 +250,7 @@ def game():
             x()
             print("Steve offers you something in his hands.")
             x()
-            input_5 = input("Do you accept it?")
+            input_5 = input("Do you accept it? Type 'yes' or 'no', but beware!")
             if input_5.lower == 'yes':
                 x()
                 print("Steve the Great and Powerful has given you what appears to be a transportation device. There's some writing on the top.")
@@ -253,6 +259,13 @@ def game():
                 input_6 = input("Would you care to skip the next level?")
                 if input_6.lower == 'yes':
                     print("Steve shouts 'Crikey!' at you as you vanish into the air.")
+                    x()
+                    print("You reappear on top of the laundromat's roof. Running to the fire escape, you climb down to the ground.")
+                    x()
+                    print("And you're out! But before you leave, you silently thank Steve for all the childhood memories and all his help.")
+                    x()
+                    print("You wander off, thinking about the possibility of adopting a crocodile.")
+                    sys.exit()
                 elif input_6.lower == 'no':
                     print("You chuck the box at Steve, still angry about your treatment in the dryer, and begin to run blindly through the bubbles.")
                     x()
@@ -266,10 +279,13 @@ def game():
                 x()
                 print("Steve attacks you on his magic crocodile, taking half your life points. Then he disappears.")
                 x()
-                self.health == self.health / 2
+                print("Your health is now diminished immensely. Better watch out. Steve Irwin is not a god to be trifled with.")
                 x()
-                print(f"Your health is now {self.health}. Better watch out. Steve Irwin is not a god to be trifled with.")
+                print("You begin to run wildly around the room stamping on the bubbles in an attempt to see what lies beyond.")
                 x()
+                print("Eventually you are able to clear a path. And that's when you see it. The door.")
+                x()
+                print("Running to it, you pull on the handle but it remains stuck.")
         scene_1()
     elif play == "no":
         print("Why are you even here...")
@@ -280,12 +296,5 @@ def game():
             play = input("Would you like to enter the magical world of the laundromat? Type 'yes' or 'no'.")
 
 
-
-
-
 game()
-
-
-#https://codereview.stackexchange.com/questions/36768/tiny-text-adventure
-#https://asciiart.website//joan/www.geocities.com/SoHo/7373/reptiles.html
 
