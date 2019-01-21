@@ -104,7 +104,7 @@ def game():
             tiles_left = 4
             while tiles_left:
                 if input_1 == 'b':
-                    print("You step hesitantly onto the tile. It holds. You breathe a sign of relief... and then it collapses. You were almost there. Tough luck.")
+                    print("You step hesitantly onto the tile. It holds. You breathe a sign of relief... and then it collapses. You were almost there. Game over.")
                     x()
                     sys.exit()
                     break
@@ -273,6 +273,9 @@ def game():
                     x()
                     print("Acheivement Earned: Cursed by Steve Irwin")
                     x()
+                    print("You run away, but it seems as if you are going in circles.")
+                    x()
+                    print("
             elif input_5.lower == 'no':
                 x()
                 print("Steve is offended.")
@@ -286,6 +289,15 @@ def game():
                 print("Eventually you are able to clear a path. And that's when you see it. The door.")
                 x()
                 print("Running to it, you pull on the handle but it remains stuck.")
+                x()
+                print("It is then that you see one of the windows lining the walls has been shattered in the wake of the earthquake.")
+                x()
+                print("Praising your good fortune, you leap through the broken glass, injuring yourself severely in the process.")
+                x()
+                print("Acheivement Earned: No Pain, No Gain.")
+                x()
+                print("Congratulations! You've escaped! Now you'd better get to the hospital. Those glass shards look painful...")
+                sys.exit()
         scene_1()
     elif play == "no":
         print("Why are you even here...")
