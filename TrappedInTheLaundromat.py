@@ -275,7 +275,11 @@ def game():
                     x()
                     print("You run away, but it seems as if you are going in circles.")
                     x()
-                    print("
+                    print("After what seems to be about a half-hour of running, you sit and have to admit you are lost.")
+                    x()
+                    print("It is then that you realize that Steve has cursed thee to remain in the laundromat forever. You can never escape.")
+                    x()
+                    sys.exit()
             elif input_5.lower == 'no':
                 x()
                 print("Steve is offended.")
