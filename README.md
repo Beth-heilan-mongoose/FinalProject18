@@ -9,4 +9,4 @@ Flowchart:
 https://drive.google.com/file/d/1WWoPId4AKCseil6ud0LSZc302ploMxHt/view 
   
 Presentation:
-https://docs.google.com/presentation/d/1vqEAL2phPAPbUXZazgUpExgejimuEez6pOlRmrX7Cag/edit#slide=id.g4c9d1f3227_0_0
+https://docs.google.com/presentation/d/1vqEAL2phPAPbUXZazgUpExgejimuEez6pOlRmrX7Cag/edit?usp=sharing
