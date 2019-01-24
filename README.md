@@ -6,7 +6,7 @@ Bibliography:
 https://docs.google.com/document/d/1CwoJfB5HRLnwOgQfJPu10U85drvHYk5r-GGKEYD9-tI/edit 
   
 Flowchart:
-https://drive.google.com/file/d/1WWoPId4AKCseil6ud0LSZc302ploMxHt/view 
+https://drive.google.com/file/d/1WWoPId4AKCseil6ud0LSZc302ploMxHt/view?usp=sharing
   
 Presentation:
 https://docs.google.com/presentation/d/1vqEAL2phPAPbUXZazgUpExgejimuEez6pOlRmrX7Cag/edit?usp=sharing
